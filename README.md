@@ -135,6 +135,7 @@
         (2) 直接删掉该swp文件即可
 ```
 ## 3.ssh
+### ssh登录
 基本用法
 远程登录服务器：
 ```
@@ -205,14 +206,52 @@ ssh user@hostname ls -a
 ```
 或者
 
-# 单引号中的$i可以求值
+单引号中的$i可以求值
 ```
 ssh myserver 'for ((i = 0; i < 10; i ++ )) do echo $i; done'
 ```
 或者
 
-# 双引号中的$i不可以求值
+双引号中的$i不可以求值
 ```
 ssh myserver "for ((i = 0; i < 10; i ++ )) do echo $i; done"
 ```
+### scp传文件
+命令格式：
+```
+scp source destination
+```
+将source路径下的文件复制到destination中
+
+一次复制多个文件：
+```
+scp source1 source2 destination
+```
+复制文件夹：
+```
+scp -r ~/tmp myserver:/home/acs/
+```
+将本地家目录中的tmp文件夹复制到myserver服务器中的/home/acs/目录下。
+```
+scp -r ~/tmp myserver:homework/
+```
+将本地家目录中的tmp文件夹复制到myserver服务器中的~/homework/目录下。
+```
+scp -r myserver:homework
+````
+将myserver服务器中的~/homework/文件夹复制到本地的当前路径下。
+
+指定服务器的端口号：
+```
+scp -P 22 source1 source2 destination
+```
+注意： scp的-r -P等参数尽量加在source和destination之前。
+
+使用scp配置其他服务器的vim和tmux
+```
+scp ~/.vimrc ~/.tmux.conf myserver:
+```
 ## 4.shell
+<https://github.com/jona54/linux_study/blob/main/shell_study.md>
+## 5.git
+<https://github.com/jona54/linux_study/blob/main/git_study.md>
