@@ -81,11 +81,7 @@
 
     ：创建并切换到`branch_name`这个分支
 17.  `git branch`：查看所有分支和当前所处分支
-18.  ```
-    git checkout branch_name
-    ```
-
-    ：切换到`branch_name`这个分支
+18.  `git checkout branch_name` ：切换到`branch_name`这个分支
 19.  ```
     git merge branch_name
     ```
