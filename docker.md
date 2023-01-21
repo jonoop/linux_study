@@ -88,8 +88,3 @@ ssh root@xxx.xxx.xxx.xxx -p 20000  # 将xxx.xxx.xxx.xxx替换成自己租的服�
 小Tips
 
 如果apt-get下载软件速度较慢，可以参考清华大学开源软件镜像站中的内容，修改软件源。
-
-作者：yxc
-链接：https://www.acwing.com/blog/content/10878/
-来源：AcWing
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
