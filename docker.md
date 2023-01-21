@@ -7,6 +7,10 @@ docker commit 容器id 镜像名:1.0
 ```
 docker save -o 压缩包名.tar 镜像名:1.0
 ```
+### 载入镜像
+```
+docker run -p 20000:22 --name 自定义仓库名 -itd 镜像名:1.0
+```
 
 将当前用户添加到docker用户组
 
