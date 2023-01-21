@@ -20,10 +20,12 @@
 
 ### 新建用户和sudo授权
 
-### 安装openssl-server
+### 安装openssl-server ssh 启动ssh
 
 ### 安装sudo
 
 ### 配置免密登录
 
 ### 上传配置文件.vimrc .bashrc .tmux.conf
+
+### 安装git
