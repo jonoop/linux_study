@@ -2,6 +2,33 @@
 将当前用户添加到docker用户组
 
 为了避免每次使用docker命令都需要加上sudo权限，可以将当前用户加入安装中自动创建的docker用户组(可以参考官方文档)：
+创建工作用户acs并赋予sudo权限
+
+登录到新服务器。打开AC Terminal，然后：
+
+ssh root@xxx.xxx.xxx.xxx  # xxx.xxx.xxx.xxx替换成新服务器的公网IP
+创建acs用户：
+
+adduser acs  # 创建用户acs
+usermod -aG sudo acs  # 给用户acs分配sudo权限
+配置免密登录方式
+
+退回AC Terminal，然后配置acs用户的别名和免密登录，可以参考4. ssh——ssh登录。
+
+配置新服务器的工作环境
+
+将AC Terminal的配置传到新服务器上：
+
+scp .bashrc .vimrc .tmux.conf server_name:  # server_name需要换成自己配置的别名
+安装tmux和docker
+
+登录自己的服务器，然后安装tmux：
+
+sudo apt-get update
+sudo apt-get install tmux
+打开tmux。（养成好习惯，所有工作都在tmux里进行，防止意外关闭终端后，工作进度丢失）
+
+然后在tmux中根据docker安装教程安装docker即可。
 
 sudo usermod -aG docker $USER
 执行完此操作后，需要退出服务器，再重新登录回来，才可以省去sudo权限。
