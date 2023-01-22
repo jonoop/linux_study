@@ -25,7 +25,7 @@
 sudo apt-get install openssh-server
 ```
 ```
-service ssh start
+sudo service ssh start
 ```
 
 ```
