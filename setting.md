@@ -21,8 +21,16 @@
 ### 新建用户和sudo授权
 
 ### 安装openssh-server ssh 启动ssh
+```
+sudo apt-get install openssh-server
+```
+```
+service ssh start
+```
 
-
+```
+service ssh status
+```
 ### 安装sudo
 
 ### 配置免密登录
