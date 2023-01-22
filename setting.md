@@ -20,7 +20,8 @@
 
 ### 新建用户和sudo授权
 
-### 安装openssl-server ssh 启动ssh
+### 安装openssh-serve ssh 启动ssh
+
 
 ### 安装sudo
 
